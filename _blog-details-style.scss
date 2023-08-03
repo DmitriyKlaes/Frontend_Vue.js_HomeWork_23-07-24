@@ -1,0 +1,166 @@
+.blogdetails-promo {
+    background-image: url("./img/mainblogdetails.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 356px;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    &__post {
+        max-width: 800px;
+        margin-bottom: 96px;
+    }
+
+    &__img {
+        margin-bottom: 46px;
+        width: 100%;
+        border-radius: 50px;
+    }
+    &__history {
+        margin-bottom: 48px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__date {
+        color: $secondTextColor;
+        font-family: $smallTextFont;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+    }
+
+    &__breadcrumbs {
+        color: $secondTextColor;
+        font-family: $smallTextFont;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+        margin-right: 70px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        font-family: $smallTextFont;
+        @extend %secondaryTextstyle;
+        letter-spacing: 0.22px;
+    }
+
+    &__citation {
+        border-radius: 50px;
+        background: #f4f0ec;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 227px 57px;
+        margin-bottom: 27px;
+    }
+
+    &__heading-citation {
+        @include fontStyle(200px, #cda274);
+        letter-spacing: 4px;
+        transform: rotate(180deg);
+        max-width: 106px;
+        max-height: 133px;
+        box-sizing: border-box;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        margin-left: 65px;
+    }
+
+    &__text-citation {
+        @include fontStyle(25px, #cda274);
+        text-align: center;
+        font-style: italic;
+        max-width: 345px;
+    }
+
+    &__list {
+        margin-bottom: 36px;
+        font-family: $smallTextFont;
+        @extend %secondaryTextstyle;
+        letter-spacing: 0.22px;
+
+        &-item {
+            font-family: $smallTextFont;
+            @extend %secondaryTextstyle;
+            letter-spacing: 0.22px;
+            list-style-position: inside;
+            margin-top: 24px;
+            margin-bottom: 8px;
+
+            &::marker {
+                @include fontStyle(20px, #cda274);
+                font-family: DM Serif Display;
+                letter-spacing: 0.4px;
+            }
+        }
+    }
+
+    &__tags {
+        max-width: 345px;
+    }
+
+    &__heading {
+        @include fontStyle(25px, $textColor);
+        letter-spacing: 0.5px;
+    }
+
+    &__tag-box {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__tag {
+        margin-bottom: 25px;
+    }
+
+    &__item {
+        margin-top: 10px;
+        &:checked + label {
+            background-color: #292f36;
+            color: #fff;
+        }
+    }
+
+    .checkbox-none {
+        position: absolute;
+        left: -9999999px;
+        display: none;
+    }
+
+    &__checkbox {
+        border-radius: 10px;
+        background: #f4f0ec;
+        padding: 10px 30px;
+        text-align: center;
+        font-family: $smallTextFont;
+        @include fontStyle(18px, $textColor);
+        letter-spacing: 0.36px;
+    }
+}
