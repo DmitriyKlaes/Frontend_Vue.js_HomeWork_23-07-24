@@ -4,7 +4,7 @@
 // Необходимо на выборе Tags чтобы происходила сортировка статей по выбранному тегу
 // тег можно выбрать только один
 
-const sortedproducts = {
+const listarticles = {
     data() {
         return {
             articlesData: [
